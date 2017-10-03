@@ -1,5 +1,33 @@
+// *********************************************************************************
 // K-Means clustering algorithm with partial information.
 // By Isak C. Etinger.
+
+/*
+	Input format:
+	[
+		A,
+		B,
+		C,
+		D,
+		[
+			// each of those arrays represent a question.
+			[1.0,0.0,0.0,1.0],	// a element of the array represents a user. 1.0 means users answered correctly the question. -1.0 means incorrectly. 0.0 means not answered.
+			[-1.0,-1.0,1.0,1.0],
+			[-1.0,0.0,0.0,-1.0],
+			[-1.0,0.0,0.0,1.0]
+		]
+	]
+	where
+	"A" is the amount of questions.
+	"B" is the amount of users.
+	"C" is the amount of clusters.
+	"D" is the maximum iterations.
+	
+	Ignores blank spaces and end-lines.
+	A,B,C,D are integers.
+	All other numbers are stored in doubles.
+*/
+// **************************************************************************************
 
 #include <iostream>
 #include <vector>
