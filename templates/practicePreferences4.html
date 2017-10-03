@@ -1,0 +1,28 @@
+﻿<ion-view title="Preferências" id="PracticePreferences4">
+
+    <ion-content padding="true" class="has-header">
+
+        <div class="list">
+            <h1 style="color:#333333;">Matérias</h1>
+            <div ng-init="init()" class="item item-divider">
+                {{ path }} /
+                {{ message }}
+            </div>
+
+            <ion-checkbox ng-repeat="item in subjectsList4"
+                          ng-value="item.text"
+                          ng-model="item.selected"
+                          ng-change="optionChange4()">
+                {{ item.text }}
+            </ion-checkbox>
+
+        </div>
+
+        <a ui-sref="practice()" 
+           ng-click="applyPreferences()"
+           id="btnApply" 
+           style="font-weight:300;font-size:30px;" class="button button-balanced button-block">Aplicar</a>
+        
+    </ion-content>
+
+</ion-view>

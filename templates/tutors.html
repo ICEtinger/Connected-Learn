@@ -1,0 +1,34 @@
+﻿<ion-view title="Professores" id="page7">
+    <ion-content padding="true" class="has-header">
+        
+        <ion-list id="tutors-list1">
+            
+            <label class="item item-select">
+                <span class="input-label">Ordenar por:</span>
+                <select ng-model="sorting.method" ng-change="optionChange()">
+                    <option value="price">preço</option>
+                    <option value="distance">distância</option>
+                    <option value="name">nome</option>
+                </select>
+            </label>
+
+            <div ng-show="noOne">
+                <center><h5>
+                    <font color="red">Não há nenhum professor com as preferências definidas. Vá em "Preferências" e tente mudar a localização, o horário disponível ou a área de interesse.</font>
+                    <br><br> 
+                    <font color="blue">Se você gostaria de se inscrever como professor particular, mande um email para "MilQContato@gmail.com"!</font>
+                </h5></center>
+            </div>
+            
+            <ion-item ng-repeat="item in tutorList" class="item-thumbnail-left item-text-wrap">
+                <img src="img/face_icon{{item.img}}.jpg">
+                <h2><strong>{{item.name}} — R${{item.price}}/h</strong></h2>
+                <p style="white-space:normal;"><h2>{{item.descr}}</h2></p>
+            </ion-item>
+      
+        </ion-list>
+
+        <div class="spacer" style="width: 300px; height: 128px;"></div>
+
+    </ion-content>
+</ion-view>

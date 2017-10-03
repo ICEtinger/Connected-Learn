@@ -1,0 +1,71 @@
+﻿<ion-view title="Practice Preferences" id="practicePreferencesMultipage">
+    <ion-content padding="true" class="has-header">
+
+
+        <div ng-if="pageNumber == 1" class="list">
+            <h1 style="color:#333333;">Tipo de prova</h1>
+            <div class="item item-divider">
+                Selecionar: {{ subjectPreferences.a1Temp }}
+            </div>
+            <ion-radio ng-repeat="item in subjectSet1"
+                       ng-model="subjectPreferences.a1Temp"
+                       ng-value="item"
+                       ng-checked="(subjectPreferences.a1Temp == item)"
+                       ng-change="selectedChange1()">
+                {{ item }}
+            </ion-radio>
+            <button ng-click="NextToPage2()"
+                    style="font-weight:300;font-size:30px;" class="button button-positive button-large button-block">
+                Próximo
+            </button>
+            <a ng-click="debug()" style="font-weight:300;font-size:30px;" class="button button-positive button-large button-block">SHOW</a>
+        </div>
+        
+
+        <div ng-if="pageNumber == 2" class="list">
+            <h1 style="color:#333333;">Instituição</h1>
+            <div class="item item-divider">
+                Selecionar: {{ subjectPreferences.a2Temp }}
+            </div>
+            <ion-radio ng-init="subjectPreferences.a2Temp='ITA'"
+                       ng-repeat="item in subjectSet2"
+                       ng-model="subjectPreferences.a2Temp"
+                       ng-value="item"
+                       ng-checked="(subjectPreferences.a2Temp == item)"
+                       ng-change="selectedChange2()">
+                {{ item }}
+            </ion-radio>
+            <button ng-click="NextToPage3()"
+                    style="font-weight:300;font-size:30px;" class="button button-positive button-large button-block">
+                Próximo
+            </button>
+            <a ng-click="debug()" style="font-weight:300;font-size:30px;" class="button button-positive button-large button-block">SHOW</a>
+        </div>
+        
+
+        <div ng-if="pageNumber == 3" class="list">
+            <h1 style="color:#333333;">Matéria</h1>
+            <div class="item item-divider">
+                Selecionar: {{ subjectPreferences.a3Temp }}
+            </div>
+            <ion-radio ng-repeat="item in subjectSet3"
+                       ng-model="subjectPreferences.a3Temp"
+                       ng-value="item"
+                       ng-checked="(subjectPreferences.a3Temp == item)"
+                       ng-change="selectedChange3()">
+                {{ item }}
+            </ion-radio>
+            <button ng-click="NextToPage4()"
+                    style="font-weight:300;font-size:30px;" class="button button-positive button-large button-block">
+                Próximo
+            </button>
+            <a ng-click="debug()" style="font-weight:300;font-size:30px;" class="button button-positive button-large button-block">SHOW</a>
+        </div>
+        
+
+    </ion-content>
+
+</ion-view>
+
+
+

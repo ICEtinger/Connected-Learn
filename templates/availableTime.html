@@ -1,0 +1,122 @@
+﻿<ion-view title="Horário disponível" id="page5">
+    <ion-content padding="true" class="has-header">
+        <!--
+        <table class="table table-bordered">
+            <tr ng-repeat="i in {1: 1, 2: 2, 3: 3, 4: 4, 5: 5}">
+                aaaaaaaaaaaaaaaaaaaaaaaaaa
+                <td ng-repeat="j in {1: 'aaaaa', 2: 2}">
+                    {{j}}
+                </td>
+            </tr>
+        </table>
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Firstnameeeeeeeeeeeeeeeeeeeeee</th>
+                        <th>Lastnameeeeeeeeeeeeeeeeeeeeeee</th>
+                        <th>Age</th>
+                        <th>City</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Anna</td>
+                        <td>Pitt</td>
+                        <td>35</td>
+                        <td>New York</td>
+                        <td>USA</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-4">.col-sm-4</div>
+            <div class="col-sm-4">.col-sm-4</div>
+            <div class="col-sm-4">.col-sm-4</div>
+        </div>
+
+            style="background-color:powderblue;"
+            -->
+
+        <h3 style="color:#333333;">Segunda-feira</h3>
+        <div class="item item-select">
+            De: {{MondayStart}}
+            <select ng-model="data.MondayStart" ng-change="MondayStartChange()" ng-options="item.value as item.displayName for item in startingHours"></select>
+        </div>
+        <div class="item item-select">
+            Até: {{MondayEnd}}
+            <select ng-model="data.MondayEnd"  ng-change="MondayEndChange()" ng-options="item.value as item.displayName for item in endingHours"></select>
+        </div>
+
+        <h3 style="color:#333333;">Terça-feira</h3>
+        <div class="item item-select">
+            De: {{TuesdayStart}}
+            <select ng-model="data.TuesdayStart"  ng-change="TuesdayStartChange()" ng-options="item.value as item.displayName for item in startingHours"></select>
+        </div>
+        <div class="item item-select">
+            Até: {{TuesdayEnd}}
+            <select ng-model="data.TuesdayEnd"  ng-change="TuesdayEndChange()" ng-options="item.value as item.displayName for item in endingHours"></select>
+        </div>
+
+        <h3 style="color:#333333;">Quarta-feira</h3>
+        <div class="item item-select">
+            De: {{WednesdayStart}}
+            <select ng-model="data.WednesdayStart"  ng-change="WednesdayStartChange()" ng-options="item.value as item.displayName for item in startingHours"></select>
+        </div>
+        <div class="item item-select">
+            Até: {{WednesdayEnd}}
+            <select ng-model="data.WednesdayEnd"  ng-change="WednesdayEndChange()" ng-options="item.value as item.displayName for item in endingHours"></select>
+        </div>
+
+        <h3 style="color:#333333;">Quinta-feira</h3>
+        <div class="item item-select">
+            De: {{ThursdayStart}}
+            <select ng-model="data.ThursdayStart" ng-change="ThursdayStartChange()" ng-options="item.value as item.displayName for item in startingHours"></select>
+        </div>
+        <div class="item item-select">
+            Até: {{ThursdayEnd}}
+            <select ng-model="data.ThursdayEnd" ng-change="ThursdayEndChange()" ng-options="item.value as item.displayName for item in endingHours"></select>
+        </div>
+
+        <h3 style="color:#333333;">Sexta-feira</h3>
+        <div class="item item-select">
+            De: {{FridayStart}}
+            <select ng-model="data.FridayStart" ng-change="FridayStartChange()" ng-options="item.value as item.displayName for item in startingHours"></select>
+        </div>
+        <div class="item item-select">
+            Até: {{FridayEnd}}
+            <select ng-model="data.FridayEnd" ng-change="FridayEndChange()" ng-options="item.value as item.displayName for item in endingHours"></select>
+        </div>
+
+        <h3 style="color:#333333;"><strong>Sábado</strong></h3>
+        <div class="item item-select">
+            De: {{SaturdayStart}}
+            <select ng-model="data.SaturdayStart" ng-change="SaturdayStartChange()" ng-options="item.value as item.displayName for item in startingHours"></select>
+        </div>
+        <div class="item item-select">
+            Até: {{SaturdayEnd}}
+            <select ng-model="data.SaturdayEnd" ng-change="SaturdayEndChange()" ng-options="item.value as item.displayName for item in endingHours"></select>
+        </div>
+
+        <h3 style="color:#333333;"><strong>Domingo</strong></h3>
+        <div class="item item-select">
+            De: {{SundayStart}}
+            <select ng-model="data.SundayStart" ng-change="SundayStartChange()" ng-options="item.value as item.displayName for item in startingHours"></select>
+        </div>
+        <div class="item item-select">
+            Até: {{SundayEnd}}
+            <select ng-model="data.SundayEnd" ng-change="SundayEndChange()" ng-options="item.value as item.displayName for item in endingHours"></select>
+        </div>
+
+        <button ng-click="debug()"
+           id="btnDebug"
+           style="font-weight:300;font-size:30px;" class="button button-balanced button-block">Debug</button>
+
+  </ion-content>
+</ion-view>

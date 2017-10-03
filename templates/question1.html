@@ -1,0 +1,44 @@
+﻿<!--
+this is the working page.    
+
+<body ng-app="myApp">
+
+    <div ng-controller="myCtrl">
+        <button ng-click="myFunc()">OK</button>
+        <p>The button has been clicked {{count}} times.</p>
+    </div>
+
+    <script>
+angular.module('myApp', [])
+.controller('myCtrl', ['$scope', function($scope) {
+    $scope.count = 0;
+    $scope.myFunc = function() {
+        $scope.count++;
+    };
+}]);
+    </script>
+
+</body>
+-->
+
+
+<ion-view title="Resolver Questões" id="page15">
+  <ion-content padding="true" class="has-header">
+    <div id="question1-markdown16" class="show-list-numbers-and-dots">
+      <p style="color:#000000;" id="question1-title" >
+        Source
+      </p>
+      <p style="color:#000000;" id="question1-text" >Text of question</p>
+    </div>
+
+    <button ng-click="correction(1)" id="alternative_A" style="font-weight:300;font-size:20px;" class="button button-positive button-large button-block"></button>
+    <button ng-click="correction(2)" id="alternative_B" style="font-weight:300;font-size:20px;" class="button button-positive button-large button-block"></button>
+    <button ng-click="correction(3)" id="alternative_C" style="font-weight:300;font-size:20px;" class="button button-positive button-large button-block"></button>
+    <button ng-click="correction(4)" id="alternative_D" style="font-weight:300;font-size:20px;" class="button button-positive button-large button-block"></button>
+    <button ng-click="correction(5)" id="alternative_E" style="font-weight:300;font-size:20px;" class="button button-positive button-large button-block"></button>
+    <a ui-sref="question1()" ng-click="nextQuestion()" id="question1-button66" style="font-size:25px;" class="button button-stable button-large button-block">Pular</a>
+    <a ui-sref="practice()" style="font-size:25px;" class="button button-stable button-large button-block">Sair</a>
+      
+      <button ng-click="debug()">debug!</button>
+</ion-content>
+</ion-view>

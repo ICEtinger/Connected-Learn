@@ -1,0 +1,41 @@
+﻿<ion-view title="Menu" id="page1">
+    <ion-content padding="true" class="has-header">
+        <div class="spacer" style="width: 300px; height: 24px;"></div>
+        <div ng-show="loginPage">
+            <div><img src="img/aVMyp2qqQdqRtWUjP71B_Logo.png" style="display: block; width: 60%; height: auto; margin-left: auto; margin-right: auto;"></div>
+            <!-- NOT REFRESHING! -->
+            <center><h5><font color="red">{{errorMessage}}</font></h5></center> 
+            <form id="login-form8" class="list">
+      
+                <div class="spacer" style="width: 300px; height: 26px;"></div>
+                <label class="item item-input">
+                    <!-- <span class="input-label">Email</span> -->
+                    <input type="text" id="txtEmail" placeholder="Email">
+                </label>
+      
+               <label class="item item-input">
+                    <!-- <span class="input-label">Password</span> -->
+                    <input type="password" id="txtPassword" placeholder="Password">
+                </label>
+            </form>
+            <div class="spacer" style="width: 300px; height: 15px;"></div>
+            <button ng-click="login()"     id="btnLogin"    style="font-weight:300;font-size:30px;" class="button button-balanced button-large button-block">Entrar</button>
+            <button ng-click="register()"  id="btnRegister" style="font-weight:300;font-size:30px;" class="button button-dark button-large button-block">Se cadastrar</button>
+            <button ng-click="changePassword()" id="btnChangePassword" style="font-weight:300;font-size:20px;" class="button button-light button-large button-block">Esqueci minha senha</button>
+            <button ui-sref="mainMenu()"> main menu</button>
+            <button ng-click="muda()">clica</button>
+        </div>
+
+        <div ng-show="!loginPage">
+            <div class="spacer" style="width: 300px; height: 38px;"></div>
+            <div><img src="img/xAygNmwQuubgeBH2oRV6_Logo.png" style="display: block; width: 60%; height: 90%; margin-left: auto; margin-right: auto;"></div>
+            <div class="spacer" style="width: 300px; height: 61px;"></div>
+            <a ui-sref="practice()" style="font-weight:300;font-size:30px;" class="button button-balanced button-large button-block">Questões</a>
+            <a ui-sref="connect()" style="font-weight:300;font-size:30px;" class="button button-calm button-large button-block">Profissionais</a>
+            <a ui-sref="statistics()" style="font-weight:300;font-size:30px;" class="button button-assertive button-large button-block">Estatísticas</a>
+            <button ng-click="logOut()" style="font-weight:300;font-size:30px;" class="button button-dark button-large button-block">Sair</button>
+        </div>
+
+            <!--      Other color options: balanced (VERDE), calm (AZUL), default, secondary, danger, light, dark     -->
+    </ion-content>
+</ion-view>

@@ -1,0 +1,31 @@
+﻿<ion-view title="Preferências" id="page23">
+    
+    <ion-content padding="true" class="has-header">
+
+        <div class="list">
+            <h1 style="color:#333333;">Instituição</h1>
+            <div class="item item-divider">
+                {{ path }} > {{ data.chosenSubject2 }}
+            </div>
+
+            <ion-radio ng-repeat="item in subjectsList2"
+                       ng-model="data.chosenSubject2"
+                       ng-value="item"
+                       ng-checked="(data.chosenSubject2 == item)"
+                       ng-change="optionChange2()">
+                {{ item }}
+            </ion-radio>
+
+        </div>
+
+        <a ng-click="nextToPreferences3()"
+           ui-sref="practicePreferences3()"
+           id="practicePreferences2-button32" 
+           style="font-weight:300;font-size:30px;" class="button button-positive button-large button-block">Próximo</a>
+
+        <a ng-click="show2()"
+           style="font-weight:300;font-size:30px;" class="button button-positive button-large button-block">SHOW</a>
+
+    </ion-content>
+
+</ion-view>

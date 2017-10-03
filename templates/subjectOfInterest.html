@@ -1,0 +1,24 @@
+﻿<ion-view title="Área de interesse" id="page6">
+    <ion-content padding="true" class="has-header">
+        <form class="list">
+       
+            <label class="item item-select">
+                <span class="input-label">Nível da prova: </span>
+                <select ng-model="sel.selectedLevel">
+                    <option value="level1">{{levels['level1']}}</option>
+                    <option value="level2">{{levels['level2']}}</option>
+                    <option value="level3">{{levels['level3']}}</option>
+                </select>
+            </label>
+            {{level}}
+
+            <h5 style="color:#000000;">Matérias:</h5>
+            <ion-checkbox ng-repeat="item in subjectsList"
+                          ng-value="item.text"
+                          ng-model="item.v">
+                {{ item.text }}
+            </ion-checkbox>
+           
+        </form>
+    </ion-content>
+</ion-view>
